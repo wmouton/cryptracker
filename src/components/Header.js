@@ -25,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 		cursor: 'pointer',
 	},
 	menuButton: {
-		marginRight: theme.spacing(2),
+		marginRight: theme.spacing(0.5),
 	},
 }));
 
