@@ -1,4 +1,4 @@
-import React, { createContext } from 'react';
+import React, { createContext, useContext } from 'react';
 
 const Crypto = createContext();
 
@@ -7,3 +7,7 @@ const CryptoContext = ({ children }) => {
 };
 
 export default CryptoContext;
+
+export const CryptoState = () => {
+	return useContext(Crypto);
+};
