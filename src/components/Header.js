@@ -63,7 +63,7 @@ const Header = () => {
 							<Select
 								variant='outlined'
 								style={{
-									width: 100,
+									width: 90,
 									height: 40,
 									marginLeft: 15,
 								}}
