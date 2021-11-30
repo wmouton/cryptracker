@@ -65,7 +65,7 @@ const Header = () => {
 								style={{
 									width: 90,
 									height: 40,
-									marginLeft: 15,
+									marginRight: 15,
 								}}
 							>
 								<MenuItem value={'USD'}>USD</MenuItem>
