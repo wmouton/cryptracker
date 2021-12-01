@@ -126,7 +126,9 @@ const CoinsTable = () => {
 												onClick={() => navigate(`/coins/${row.id}`)}
 												className={classes.row}
 												key={row.name}
-											></TableRow>
+											>
+												<TableCell></TableCell>
+											</TableRow>
 										);
 									})}
 								</TableBody>
