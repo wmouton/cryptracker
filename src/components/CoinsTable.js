@@ -6,9 +6,11 @@ import {
 	Container,
 	createTheme,
 	LinearProgress,
+	makeStyles,
 	MuiThemeProvider,
 	Paper,
 	Table,
+	TableBody,
 	TableCell,
 	TableContainer,
 	TableHead,
@@ -16,6 +18,7 @@ import {
 	TextField,
 	Typography,
 } from '@material-ui/core';
+import { useNavigate } from 'react-router-dom';
 
 export function numberWithCommas(x) {
 	return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
@@ -25,6 +28,8 @@ const CoinsTable = () => {
 	const [coins, setCoins] = useState([]);
 	const [loading, setLoading] = useState(false);
 	const [search, setSearch] = useState('');
+
+	const navigate = useNavigate();
 
 	const { currency, symbol } = CryptoState();
 
@@ -52,6 +57,25 @@ const CoinsTable = () => {
 			type: 'dark',
 		},
 	});
+
+	const handleSearch = () => {
+		return coins.filter(
+			(coin) =>
+				coin.name.toLowerCase().includes(search) ||
+				coin.symbol.toLowerCase().includes(search)
+		);
+	};
+
+	const useStyles = makeStyles({
+		row: {
+			backgroundColor: '#16171a',
+			cursor: 'pointer',
+			'&:hover': {
+				backgroundColor: '#131111',
+			},
+		},
+	});
+	const classes = useStyles();
 
 	return (
 		<>
@@ -94,6 +118,18 @@ const CoinsTable = () => {
 										)}
 									</TableRow>
 								</TableHead>
+								<TableBody>
+									{handleSearch().map((row) => {
+										const profit = row.price_change_percentage_24h > 0;
+										return (
+											<TableRow
+												onClick={() => navigate(`/coins/${row.id}`)}
+												className={classes.row}
+												key={row.name}
+											></TableRow>
+										);
+									})}
+								</TableBody>
 							</Table>
 						)}
 					</TableContainer>
