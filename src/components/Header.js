@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 		color: 'white',
 		fontFamily: 'Merienda',
 		fontWeight: 'bold',
-		fontSize: '10px',
+		fontSize: '4px',
 		cursor: 'pointer',
 	},
 	menuButton: {
@@ -77,14 +77,6 @@ const Header = () => {
 								className={classes.title}
 							>
 								Cryptracer
-							</Typography>
-							<Typography
-								onClick={() => navigate('/')}
-								// onClick={() => history.push(`/`)}
-								variant='h6'
-								className={classes.wm}
-							>
-								by WL Mouton
 							</Typography>
 							<Select
 								variant='outlined'
