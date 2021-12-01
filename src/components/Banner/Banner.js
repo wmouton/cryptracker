@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, makeStyles, Typography } from '@material-ui/core';
-import logo from '../../img/logo/logo.png';
 import Carousel from './Carousel';
 
 const useStyles = makeStyles((theme) => ({
@@ -32,15 +31,17 @@ const Banner = () => {
 			<div className={classes.banner}>
 				<Container className={classes.bannerContent}>
 					<div className={classes.tagline}>
-						<div className={classes.tagline}>
-							<a href='/'>
-								<img
-									style={{ width: '250px', paddingTop: '10' }}
-									src={logo}
-									alt=''
-								/>
-							</a>
-						</div>
+						<Typography
+							variant='h2'
+							style={{
+								color: 'steelblue',
+								fontWeight: 'bold',
+								marginBottom: 15,
+								fontFamily: 'Merienda',
+							}}
+						>
+							CRYPTRACER
+						</Typography>
 						<Typography
 							variant='subtitle2'
 							style={{
