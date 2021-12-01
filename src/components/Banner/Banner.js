@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, makeStyles } from '@material-ui/core';
+import { Container, makeStyles, Typography } from '@material-ui/core';
 import logo from '../../img/logo/logo.png';
 
 const useStyles = makeStyles((theme) => ({
@@ -33,11 +33,22 @@ const Banner = () => {
 					<div className={classes.tagline}>
 						<a href='/'>
 							<img
-								style={{ width: '500px', paddingTop: '10' }}
+								style={{ width: '510px', paddingTop: '10' }}
 								src={logo}
 								alt=''
 							/>
 						</a>
+						<Typography
+							variant='subtitle2'
+							style={{
+								color: 'darkgrey',
+								textTransform: 'capitalize',
+								fontFamily: 'Montserrat',
+							}}
+						>
+							All the information regarding your favorite Crypto Currencies at
+							your fingertips.
+						</Typography>
 					</div>
 				</Container>
 			</div>
