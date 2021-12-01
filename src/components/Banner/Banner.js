@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, makeStyles } from '@material-ui/core';
+import logo from '../../img/logo/logo.png';
 
 const useStyles = makeStyles((theme) => ({
 	banner: {
@@ -29,7 +30,15 @@ const Banner = () => {
 		<>
 			<div className={classes.banner}>
 				<Container className={classes.bannerContent}>
-					<div className={classes.tagline}></div>
+					<div className={classes.tagline}>
+						<a href='/'>
+							<img
+								style={{ width: '500px', paddingTop: '10' }}
+								src={logo}
+								alt=''
+							/>
+						</a>
+					</div>
 				</Container>
 			</div>
 		</>
