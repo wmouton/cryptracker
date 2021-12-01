@@ -13,6 +13,13 @@ const useStyles = makeStyles((theme) => ({
 		paddingTop: 25,
 		justifyContent: 'space-around',
 	},
+	tagline: {
+		display: 'flex',
+		height: '40%',
+		flexDirection: 'column',
+		justifyContent: 'center',
+		textAlign: 'center',
+	},
 }));
 
 const Banner = () => {
@@ -21,7 +28,9 @@ const Banner = () => {
 	return (
 		<>
 			<div className={classes.banner}>
-				<Container className={classes.bannerContent}></Container>
+				<Container className={classes.bannerContent}>
+					<div className={classes.tagline}></div>
+				</Container>
 			</div>
 		</>
 	);
