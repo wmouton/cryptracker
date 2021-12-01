@@ -1,5 +1,6 @@
+import React from 'react';
 import { makeStyles } from '@material-ui/core';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
 import Coinpage from './Pages/Coinpage';
@@ -17,15 +18,17 @@ function App() {
 	const classes = useStyles();
 
 	return (
-		<BrowserRouter>
-			<div className={classes.App}>
-				<Header />
-				<Routes>
-					<Route path='/' component={Homepage} exact />
-					<Route path='/coins/:id' component={Coinpage} exact />
-				</Routes>
-			</div>
-		</BrowserRouter>
+		<React.Fragment>
+			<Router>
+				<div className={classes.App}>
+					<Header />
+					<Routes>
+						<Route exact path='/' element={<Homepage />} />
+						<Route exact path='/coins/:id' element={<Coinpage />} />
+					</Routes>
+				</div>
+			</Router>
+		</React.Fragment>
 	);
 }
 
