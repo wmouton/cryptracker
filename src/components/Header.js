@@ -8,6 +8,8 @@ import {
 	ThemeProvider,
 } from '@material-ui/core';
 import { useNavigate } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
+import { CryptoState } from '../CryptoContext';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
@@ -19,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 		// flexGrow: 1,
 		flex: 1,
 		color: 'cyan',
-		fontFamily: 'MontserratAlternates',
+		fontFamily: 'Merienda',
 		fontWeight: 'bold',
 		cursor: 'pointer',
 	},
@@ -31,6 +33,11 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
 	const classes = useStyles();
 	const navigate = useNavigate();
+	// const history = useHistory();
+	const { currency, setCurrency } = CryptoState();
+
+	console.log(currency);
+
 	const darkTheme = createTheme({
 		palette: {
 			primary: {
@@ -39,6 +46,7 @@ const Header = () => {
 			type: 'dark',
 		},
 	});
+
 	return (
 		<ThemeProvider theme={darkTheme}>
 			<div className={classes.root}>
@@ -55,6 +63,7 @@ const Header = () => {
 							</IconButton> */}
 							<Typography
 								onClick={() => navigate('/')}
+								// onClick={() => history.push(`/`)}
 								variant='h6'
 								className={classes.title}
 							>
@@ -67,6 +76,8 @@ const Header = () => {
 									height: 40,
 									marginRight: 15,
 								}}
+								value={currency}
+								onChange={(e) => setCurrency(e.target.value)}
 							>
 								<MenuItem value={'USD'}>USD</MenuItem>
 								<MenuItem value={'ZAR'}>ZAR</MenuItem>
