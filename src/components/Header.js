@@ -25,6 +25,15 @@ const useStyles = makeStyles((theme) => ({
 		fontWeight: 'bold',
 		cursor: 'pointer',
 	},
+	wm: {
+		// flexGrow: 1,
+		flex: 1,
+		color: 'white',
+		fontFamily: 'Merienda',
+		fontWeight: 'bold',
+		fontSize: '10px',
+		cursor: 'pointer',
+	},
 	menuButton: {
 		marginRight: theme.spacing(0.1),
 	},
@@ -68,6 +77,14 @@ const Header = () => {
 								className={classes.title}
 							>
 								Cryptracer
+							</Typography>
+							<Typography
+								onClick={() => navigate('/')}
+								// onClick={() => history.push(`/`)}
+								variant='h6'
+								className={classes.wm}
+							>
+								by WL Mouton
 							</Typography>
 							<Select
 								variant='outlined'
