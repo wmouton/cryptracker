@@ -20,7 +20,7 @@ const useStyles = makeStyles((theme) => ({
 	title: {
 		// flexGrow: 1,
 		flex: 1,
-		color: 'cyan',
+		color: 'steelblue',
 		fontFamily: 'Merienda',
 		fontWeight: 'bold',
 		cursor: 'pointer',
