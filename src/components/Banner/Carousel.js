@@ -5,6 +5,7 @@ import axios from 'axios';
 import { CryptoState } from '../../CryptoContext';
 import AliceCarousel from 'react-alice-carousel';
 import { Link } from 'react-router-dom';
+import { numberWithCommas } from '../CoinsTable';
 
 const useStyles = makeStyles((theme) => ({
 	carousel: {
@@ -18,7 +19,7 @@ const Carousel = () => {
 	const classes = useStyles();
 
 	const [trending, setTrending] = useState([]);
-	const { currency } = CryptoState();
+	const { currency, symbol } = CryptoState();
 
 	const fetchTrendingCoins = async () => {
 		const { data } = await axios.get(TrendingCoins(currency));
@@ -57,6 +58,9 @@ const Carousel = () => {
 						{profit && '+'}
 						{coin?.price_change_percentage_24h?.toFixed(2)}%
 					</span>
+				</span>
+				<span style={{ fontSize: 22, fontWeight: 500 }}>
+					{symbol} {numberWithCommas(coin?.current_price.toFixed(2))}
 				</span>
 			</Link>
 		);
