@@ -34,20 +34,35 @@ const Carousel = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [currency]);
 
-  const items = trending.map((coin) => {
-    return (
-      <Link className={classes.carouselItem} to={`/coins/${coin.id}`}>
-        <img
-          src={coin?.image}
-          alt={coin.name}
-          height="80"
-          style={{ marginBottom: 10 }}
-        />
-      </Link>
-      )
-  });
+	const items = trending.map((coin) => {
+		let profit = coin?.price_change_percentage_24h >= 0;
 
-  const responsive = {
+		return (
+			<Link className={classes.carouselItem} to={`/coins/${coin.id}`}>
+				<img
+					src={coin?.image}
+					alt={coin.name}
+					height='80'
+					style={{ marginBottom: 10 }}
+				/>
+				<span>
+					{coin?.symbol}
+					&nbsp;
+					<span
+						style={{
+							color: profit > 0 ? 'rgb(14, 203, 129)' : 'red',
+							fontWeight: 500,
+						}}
+					>
+						{profit && '+'}
+						{coin?.price_change_percentage_24h?.toFixed(2)}%
+					</span>
+				</span>
+			</Link>
+		);
+	});
+
+	const responsive = {
 		0: {
 			items: 2,
 		},
