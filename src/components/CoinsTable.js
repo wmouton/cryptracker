@@ -6,6 +6,7 @@ import {
 	Container,
 	createTheme,
 	MuiThemeProvider,
+	TextField,
 	Typography,
 } from '@material-ui/core';
 
@@ -16,6 +17,7 @@ export function numberWithCommas(x) {
 const CoinsTable = () => {
 	const [coins, setCoins] = useState([]);
 	const [loading, setLoading] = useState(false);
+	const [search, setSearch] = useState('');
 
 	const { currency, symbol } = CryptoState();
 
@@ -54,6 +56,12 @@ const CoinsTable = () => {
 					>
 						Cryptocurrency Prices by Market Cap
 					</Typography>
+					<TextField
+						label='Search For a Crypto Currency..'
+						variant='outlined'
+						style={{ marginBottom: 20, width: '100%' }}
+						onChange={(e) => setSearch(e.target.value)}
+					/>
 				</Container>
 			</MuiThemeProvider>
 		</>
