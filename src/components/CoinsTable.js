@@ -127,7 +127,21 @@ const CoinsTable = () => {
 												className={classes.row}
 												key={row.name}
 											>
-												<TableCell></TableCell>
+												<TableCell
+													component='th'
+													scope='row'
+													style={{
+														display: 'flex',
+														gap: 15,
+													}}
+												>
+													<img
+														src={row?.image}
+														alt={row.name}
+														height='50'
+														style={{ marginBottom: 10 }}
+													/>
+												</TableCell>
 											</TableRow>
 										);
 									})}
