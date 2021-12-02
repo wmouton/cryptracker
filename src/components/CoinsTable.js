@@ -157,6 +157,10 @@ const CoinsTable = () => {
 														</span>
 													</div>
 												</TableCell>
+												<TableCell align='right'>
+													{symbol}{' '}
+													{numberWithCommas(row.current_price.toFixed(2))}
+												</TableCell>
 											</TableRow>
 										);
 									})}
