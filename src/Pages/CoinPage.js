@@ -44,6 +44,11 @@ const CoinPage = () => {
 			marginTop: 25,
 			borderRight: '2px solid grey',
 		},
+		heading: {
+			fontWeight: 'bold',
+			marginBottom: 20,
+			fontFamily: 'Montserrat',
+		},
 	}));
 
 	const classes = useStyles();
