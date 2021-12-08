@@ -1,4 +1,8 @@
-import { makeStyles, MuiThemeProvider } from '@material-ui/core';
+import {
+	CircularProgress,
+	makeStyles,
+	MuiThemeProvider,
+} from '@material-ui/core';
 import { createTheme } from '@material-ui/core';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
@@ -53,7 +57,17 @@ const CoinInfo = ({ coin }) => {
 
 	return (
 		<MuiThemeProvider theme={darkTheme}>
-			<div className={classes.container}></div>
+			<div className={classes.container}>
+				{!historicData ? (
+					<CircularProgress
+						style={{ color: 'gold' }}
+						size={250}
+						thickness={1}
+					/>
+				) : (
+					<></>
+				)}
+			</div>
 		</MuiThemeProvider>
 	);
 };
