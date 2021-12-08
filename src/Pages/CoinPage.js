@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Coinpage = () => {
+const CoinPage = () => {
 	return (
 		<div>
 			<h1>Coin Page</h1>
@@ -8,4 +8,4 @@ const Coinpage = () => {
 	);
 };
 
-export default Coinpage;
+export default CoinPage;

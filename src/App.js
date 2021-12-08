@@ -3,8 +3,8 @@ import { makeStyles } from '@material-ui/core';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header';
-import Coinpage from './Pages/Coinpage';
-import Homepage from './Pages/Homepage';
+import CoinPage from './Pages/CoinPage';
+import HomePage from './Pages/HomePage';
 
 function App() {
 	const useStyles = makeStyles({
@@ -23,8 +23,8 @@ function App() {
 				<div className={classes.App}>
 					<Header />
 					<Routes>
-						<Route exact path='/' element={<Homepage />} />
-						<Route exact path='/coins/:id' element={<Coinpage />} />
+						<Route exact path='/' element={<HomePage />} />
+						<Route exact path='/coins/:id' element={<CoinPage />} />
 					</Routes>
 				</div>
 			</Router>
