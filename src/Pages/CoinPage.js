@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useParams } from 'react-router';
 import { SingleCoin } from '../config/api';
 import { CryptoState } from '../CryptoContext';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Typography } from '@material-ui/core';
 import CoinInfo from '../components/CoinInfo';
 
 const CoinPage = () => {
@@ -57,6 +57,9 @@ const CoinPage = () => {
 					height='200'
 					style={{ marginBottom: 20 }}
 				/>
+				<Typography variant='h3' className={classes.heading}>
+					{coin?.name}
+				</Typography>
 			</div>
 			{/* chart */}
 			<CoinInfo coin={coin} />
