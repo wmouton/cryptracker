@@ -4,6 +4,7 @@ import { useParams } from 'react-router';
 import { SingleCoin } from '../config/api';
 import { CryptoState } from '../CryptoContext';
 import { makeStyles, Typography } from '@material-ui/core';
+import ReactHtmlParser from 'react-html-parser';
 import CoinInfo from '../components/CoinInfo';
 
 const CoinPage = () => {
@@ -64,6 +65,9 @@ const CoinPage = () => {
 				/>
 				<Typography variant='h3' className={classes.heading}>
 					{coin?.name}
+				</Typography>
+				<Typography variant='subtitle1' className={classes.description}>
+					{ReactHtmlParser(coin?.description.en.split('. ')[0])}.
 				</Typography>
 			</div>
 			{/* chart */}
