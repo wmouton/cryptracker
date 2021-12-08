@@ -50,6 +50,14 @@ const CoinPage = () => {
 			marginBottom: 20,
 			fontFamily: 'Montserrat',
 		},
+		description: {
+			width: '100%',
+			fontFamily: 'Montserrat',
+			padding: 25,
+			paddingBottom: 15,
+			paddingTop: 0,
+			textAlign: 'justify',
+		},
 	}));
 
 	const classes = useStyles();
