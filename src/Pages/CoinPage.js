@@ -51,8 +51,12 @@ const CoinPage = () => {
 	return (
 		<div className={classes.container}>
 			<div className={classes.sidebar}>
-				<h1>Side Bar</h1>
-				{/* sidebar */}
+				<img
+					src={coin?.image.large}
+					alt={coin?.name}
+					height='200'
+					style={{ marginBottom: 20 }}
+				/>
 			</div>
 			{/* chart */}
 			<CoinInfo coin={coin} />
