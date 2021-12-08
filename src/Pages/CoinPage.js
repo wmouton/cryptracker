@@ -77,6 +77,13 @@ const CoinPage = () => {
 				<Typography variant='subtitle1' className={classes.description}>
 					{ReactHtmlParser(coin?.description.en.split('. ')[0])}.
 				</Typography>
+				<div className={classes.marketData}>
+          <span style={{ display: "flex" }}>
+            <Typography variant="h5" className={classes.heading}>
+              Rank:
+            </Typography>
+						</span>
+						</div>
 			</div>
 			{/* chart */}
 			<CoinInfo coin={coin} />
