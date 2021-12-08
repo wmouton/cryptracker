@@ -5,6 +5,7 @@ import { SingleCoin } from '../config/api';
 import { CryptoState } from '../CryptoContext';
 import { makeStyles, Typography } from '@material-ui/core';
 import ReactHtmlParser from 'react-html-parser';
+// import { numberWithCommas } from '../components/CoinsTable';
 import CoinInfo from '../components/CoinInfo';
 
 const CoinPage = () => {
@@ -78,12 +79,22 @@ const CoinPage = () => {
 					{ReactHtmlParser(coin?.description.en.split('. ')[0])}.
 				</Typography>
 				<div className={classes.marketData}>
-          <span style={{ display: "flex" }}>
-            <Typography variant="h5" className={classes.heading}>
-              Rank:
-            </Typography>
-						</span>
-						</div>
+					<span style={{ display: 'flex' }}>
+						<Typography variant='h5' className={classes.heading}>
+							Rank:
+						</Typography>
+						&nbsp; &nbsp;
+						<Typography
+							variant='h5'
+							style={{
+								fontFamily: 'Montserrat',
+							}}
+						>
+							{/* {numberWithCommas(coin?.market_cap_rank)} */}
+							{coin?.market_cap_rank}
+						</Typography>
+					</span>
+				</div>
 			</div>
 			{/* chart */}
 			<CoinInfo coin={coin} />
