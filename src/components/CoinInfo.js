@@ -6,6 +6,7 @@ import {
 import { createTheme } from '@material-ui/core';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { Line } from 'react-chartjs-2';
 import { HistoricalChart } from '../config/api';
 import { CryptoState } from '../CryptoContext';
 
@@ -41,6 +42,8 @@ const CoinInfo = ({ coin }) => {
 		setHistoricData(data.prices);
 	};
 
+	console.log(coin);
+
 	useEffect(() => {
 		fetchHistoricData();
 		// eslint-disable-next-line react-hooks/exhaustive-deps
@@ -65,7 +68,20 @@ const CoinInfo = ({ coin }) => {
 						thickness={1}
 					/>
 				) : (
-					<></>
+					<>
+						<Line
+							data={{
+								labels: historicData.map((coin) => {
+									let date = new Date(coin[0]);
+									let time =
+										date.getHours() > 12
+											? `${date.getHours() - 12}:${date.getMinutes()} PM`
+											: `${date.getHours()}:${date.getMinutes()} AM`;
+									return days === 1 ? time : date.toLocaleDateString();
+								}),
+							}}
+						/>
+					</>
 				)}
 			</div>
 		</MuiThemeProvider>
