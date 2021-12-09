@@ -79,6 +79,11 @@ const CoinInfo = ({ coin }) => {
 											: `${date.getHours()}:${date.getMinutes()} AM`;
 									return days === 1 ? time : date.toLocaleDateString();
 								}),
+								datasets: [
+									{
+										data: historicData.map((coin) => coin[1]),
+									},
+								],
 							}}
 						/>
 					</>
