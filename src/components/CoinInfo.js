@@ -9,6 +9,9 @@ import React, { useEffect, useState } from 'react';
 import { Line } from 'react-chartjs-2';
 import { HistoricalChart } from '../config/api';
 import { CryptoState } from '../CryptoContext';
+// fix Error: "category" is not a registered scale.
+import { Chart, registerables } from 'chart.js';
+Chart.register(...registerables);
 
 const CoinInfo = ({ coin }) => {
 	const [historicData, setHistoricData] = useState();
