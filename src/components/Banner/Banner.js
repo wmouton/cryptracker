@@ -41,7 +41,10 @@ const Banner = () => {
 							}}
 						>
 							CRYPTRACER
+							<br></br>
+							<p style={{fontSize:"12px"}}>by WMouton</p>
 						</Typography>
+						
 						<Typography
 							variant='subtitle3'
 							style={{
@@ -53,6 +56,7 @@ const Banner = () => {
 							All the information regarding your favorite Crypto Currencies at
 							your fingertips.
 						</Typography>
+						
 					</div>
 					<Carousel />
 				</Container>

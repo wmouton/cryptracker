@@ -92,6 +92,7 @@ const Header = () => {
 								<MenuItem value={'USD'}>USD</MenuItem>
 								<MenuItem value={'ZAR'}>ZAR</MenuItem>
 							</Select>
+							
 							<AuthModal/>
 						</Toolbar>
 					</Container>

@@ -84,6 +84,7 @@ const CoinsTable = () => {
 					>
 						Cryptocurrency Prices by Market Cap
 					</Typography>
+					
 					<TextField
 						label='Search For a Crypto Currency..'
 						variant='outlined'
