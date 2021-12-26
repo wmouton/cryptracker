@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Login = () => {
+const Login = ({ handleClose }) => {
     return (
         <div>
             Login
