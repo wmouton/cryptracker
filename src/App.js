@@ -5,6 +5,7 @@ import './App.css';
 import Header from './components/Header';
 import CoinPage from './Pages/CoinPage';
 import HomePage from './Pages/HomePage';
+import Alert from './components/Alert';
 
 function App() {
 	const useStyles = makeStyles({
@@ -28,6 +29,7 @@ function App() {
 						<Route exact path='/coins/:id' element={<CoinPage />} />
 					</Routes>
 				</div>
+				<Alert />
 			</Router>
 		</React.Fragment>
 	);
