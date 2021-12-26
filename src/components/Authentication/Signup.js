@@ -23,6 +23,14 @@ const Signup = ({ handleClose }) => {
         onChange={e => setEmail(e.target.value)}
         fullWidth
       />
+      <TextField
+        variant='outlined'
+        label='Enter Password'
+        type='password'
+        value={password}
+        onChange={e => setPassword(e.target.value)}
+        fullWidth
+      />
     </Box>
   );
 };
