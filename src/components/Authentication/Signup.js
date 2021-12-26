@@ -1,4 +1,4 @@
-import { Box } from '@material-ui/core';
+import { Box, TextField } from '@material-ui/core';
 import React, { useState } from 'react';
 
 const Signup = ({ handleClose }) => {
@@ -14,7 +14,16 @@ const Signup = ({ handleClose }) => {
         flexDirection: 'column',
         gap: '20px',
       }}
-    ></Box>
+    >
+      <TextField
+        variant='outlined'
+        type='email'
+        label='Enter Email'
+        value={email}
+        onChange={e => setEmail(e.target.value)}
+        fullWidth
+      />
+    </Box>
   );
 };
 
