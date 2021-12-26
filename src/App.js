@@ -15,7 +15,6 @@ function App() {
 			minHeight: '100vh',
 		},
 	});
-	console.log(process.env)
 
 	const classes = useStyles();
 
