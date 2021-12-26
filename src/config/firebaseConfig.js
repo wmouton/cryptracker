@@ -1,10 +1,10 @@
 const firebaseConfig = {
-  apiKey: 'AIzaSyAqIdIbCu_NBHPtA4PwOYdIm2cKbBiI9ag',
-  authDomain: 'cryptracer-crypto-tracker.firebaseapp.com',
-  projectId: 'cryptracer-crypto-tracker',
-  storageBucket: 'cryptracer-crypto-tracker.appspot.com',
-  messagingSenderId: '1005124842956',
-  appId: '1:1005124842956:web:dfa068a23af8f6e93e5969',
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN_API_KEY,
+  projectId: process.env.REACT_APP_PROJECT_ID_API_KEY,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET_API_KEY,
+  messagingSenderId: REACT_APP_MESSAGE_ID_API_KEY,
+  appId: REACT_APP_ID_API_KE,
 };
 
 export default firebaseConfig;
