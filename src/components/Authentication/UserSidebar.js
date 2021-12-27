@@ -21,6 +21,13 @@ const useStyles = makeStyles({
     gap: '20px',
     height: '92%',
   },
+  picture: {
+    width: 200,
+    height: 200,
+    cursor: 'pointer',
+    backgroundColor: 'steelblue',
+    objectFit: 'contain',
+  },
 });
 
 export default function UserSidebar() {
