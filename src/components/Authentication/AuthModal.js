@@ -20,6 +20,15 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     borderRadius: 10,
   },
+  google: {
+    padding: 24,
+    paddingTop: 0,
+    display: 'flex',
+    flexDirection: 'column',
+    textAlign: 'center',
+    gap: 20,
+    fontSize: 20,
+  },
 }));
 
 export default function AuthModal() {
@@ -40,7 +49,7 @@ export default function AuthModal() {
     setValue(newValue);
   };
 
-  const signInWithGoogle = () => {}
+  const signInWithGoogle = () => {};
 
   return (
     <div>
