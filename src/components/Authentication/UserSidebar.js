@@ -69,6 +69,17 @@ export default function UserSidebar() {
                   src={user.photoURL}
                   alt={user.displayName || user.email}
                 />
+                <span
+                  style={{
+                    width: '100%',
+                    fontSize: 25,
+                    textAlign: 'center',
+                    fontWeight: 'bolder',
+                    wordWrap: 'break-word',
+                  }}
+                >
+                  {user.displayName || user.email}
+                </span>
               </div>
             </div>
           </Drawer>
