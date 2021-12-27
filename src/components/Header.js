@@ -44,7 +44,7 @@ const Header = () => {
 	const classes = useStyles();
 	const navigate = useNavigate();
 	// const history = useHistory();
-	const { currency, setCurrency } = CryptoState();
+	const { currency, setCurrency, user } = CryptoState();
 
 	console.log(currency);
 
@@ -93,7 +93,7 @@ const Header = () => {
 								<MenuItem value={'ZAR'}>ZAR</MenuItem>
 							</Select>
 							
-							<AuthModal/>
+							{user ? <UserSidebar /> : <AuthModal />}
 						</Toolbar>
 					</Container>
 				</AppBar>
