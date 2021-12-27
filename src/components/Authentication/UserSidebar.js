@@ -28,9 +28,15 @@ const useStyles = makeStyles({
     backgroundColor: 'steelblue',
     objectFit: 'contain',
   },
+  logout: {
+    height: '8%',
+    width: '100%',
+    backgroundColor: '#EEBC1D',
+    marginTop: 20,
+  },
 });
 
-const logOut = () => { };
+const logOut = () => {};
 
 export default function UserSidebar() {
   const classes = useStyles();
@@ -91,7 +97,7 @@ export default function UserSidebar() {
                 </span>
               </div>
               <Button
-                variant="contained"
+                variant='contained'
                 className={classes.logout}
                 onClick={logOut}
               >
