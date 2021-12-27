@@ -3,9 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import { AppBar, Button, Tab, Tabs } from '@material-ui/core';
+import { AppBar, Box, Button, Tab, Tabs } from '@material-ui/core';
 import Login from './Login';
 import Signup from './Signup';
+import GoogleButton from 'react-google-button';
 
 const useStyles = makeStyles(theme => ({
   modal: {
