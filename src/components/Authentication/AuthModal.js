@@ -40,6 +40,8 @@ export default function AuthModal() {
     setValue(newValue);
   };
 
+  const signInWithGoogle = () => {}
+
   return (
     <div>
       <Button
