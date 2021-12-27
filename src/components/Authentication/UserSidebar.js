@@ -31,7 +31,7 @@ const useStyles = makeStyles({
   logout: {
     height: '8%',
     width: '100%',
-    backgroundColor: '#EEBC1D',
+    backgroundColor: 'steelblue',
     marginTop: 20,
   },
 });
