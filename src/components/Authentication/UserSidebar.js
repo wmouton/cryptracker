@@ -13,6 +13,14 @@ const useStyles = makeStyles({
     flexDirection: 'column',
     fontFamily: 'monospace',
   },
+  profile: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: '20px',
+    height: '92%',
+  },
 });
 
 export default function UserSidebar() {
@@ -54,7 +62,15 @@ export default function UserSidebar() {
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
           >
-            <div className={classes.container}></div>
+            <div className={classes.container}>
+              <div className={classes.profile}>
+                <Avatar
+                  className={classes.picture}
+                  src={user.photoURL}
+                  alt={user.displayName || user.email}
+                />
+              </div>
+            </div>
           </Drawer>
         </React.Fragment>
       ))}
