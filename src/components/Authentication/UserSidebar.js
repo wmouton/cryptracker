@@ -31,7 +31,7 @@ export default function UserSidebar() {
               width: 38,
               marginLeft: 15,
               cursor: "pointer",
-              backgroundColor: "#EEBC1D",
+              backgroundColor: "steelblue",
             }}
             src={user.photoURL}
             alt={user.displayName || user.email}
