@@ -34,6 +34,19 @@ const useStyles = makeStyles({
     backgroundColor: 'steelblue',
     marginTop: 20,
   },
+  watchlist: {
+    flex: 1,
+    width: '100%',
+    backgroundColor: 'grey',
+    borderRadius: 10,
+    padding: 15,
+    paddingTop: 10,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: 12,
+    overflowY: 'scroll',
+  },
 });
 
 const logOut = () => {};
