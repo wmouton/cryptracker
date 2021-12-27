@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   paper: {
     width: 400,
     backgroundColor: theme.palette.background.paper,
-    color: "white",
+    color: 'white',
     borderRadius: 10,
   },
 }));
@@ -85,6 +85,14 @@ export default function AuthModal() {
             </AppBar>
             {value === 0 && <Login handleClose={handleClose} />}
             {value === 1 && <Signup handleClose={handleClose} />}
+
+            <Box className={classes.google}>
+              <span>OR</span>
+              <GoogleButton
+                style={{ width: '100%', outline: 'none' }}
+                onClick={signInWithGoogle}
+              />
+            </Box>
           </div>
         </Fade>
       </Modal>
