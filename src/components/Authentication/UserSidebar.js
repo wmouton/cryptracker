@@ -2,7 +2,7 @@ import React from 'react';
 
 import Drawer from '@material-ui/core/Drawer';
 import { CryptoState } from '../../CryptoContext';
-import { Avatar, makeStyles } from '@material-ui/core';
+import { Avatar, Button, makeStyles } from '@material-ui/core';
 
 const useStyles = makeStyles({
   container: {
@@ -29,6 +29,8 @@ const useStyles = makeStyles({
     objectFit: 'contain',
   },
 });
+
+const logOut = () => { };
 
 export default function UserSidebar() {
   const classes = useStyles();
@@ -88,6 +90,13 @@ export default function UserSidebar() {
                   {user.displayName || user.email}
                 </span>
               </div>
+              <Button
+                variant="contained"
+                className={classes.logout}
+                onClick={logOut}
+              >
+                Log Out
+              </Button>
             </div>
           </Drawer>
         </React.Fragment>
