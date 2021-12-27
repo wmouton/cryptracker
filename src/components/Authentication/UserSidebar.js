@@ -29,7 +29,6 @@ export default function UserSidebar() {
             style={{
               height: 38,
               width: 38,
-              marginLeft: 15,
               cursor: "pointer",
               backgroundColor: "steelblue",
             }}
