@@ -78,7 +78,7 @@ const Header = () => {
 								variant='h6'
 								className={classes.title}
 							>
-								Cryptracer
+								Cryptracker
 							</Typography>
 							<Select
 								variant='outlined'

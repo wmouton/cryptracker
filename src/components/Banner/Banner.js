@@ -40,7 +40,7 @@ const Banner = () => {
 								fontFamily: 'Merienda',
 							}}
 						>
-							CRYPTRACER
+							CRYPTRACKER
 							<br></br>
 							<p style={{fontSize:"12px"}}>by WMouton</p>
 						</Typography>
