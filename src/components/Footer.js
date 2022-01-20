@@ -14,7 +14,7 @@ const Footer = () => {
 					variant='h6'
 					style={{ margin: 18, fontFamily: 'Montserrat' }}
 				>
-					© 2021, Cryptracer, Inc
+					© 2021, Cryptracker
 				</Typography>
 				<Typography
 					variant='h6'

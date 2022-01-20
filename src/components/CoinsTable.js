@@ -86,7 +86,7 @@ const CoinsTable = () => {
 					</Typography>
 					
 					<TextField
-						label='Search For a Crypto Currency..'
+						label='Search For A Crypto Currency...'
 						variant='outlined'
 						style={{ marginBottom: 20, width: '100%' }}
 						onChange={(e) => setSearch(e.target.value)}
@@ -150,7 +150,7 @@ const CoinsTable = () => {
 															<span
 																style={{
 																	textTransform: 'uppercase',
-																	fontSize: 22,
+																	fontSize: 20,
 																}}
 															>
 																{row.symbol}

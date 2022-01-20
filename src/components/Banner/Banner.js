@@ -43,7 +43,7 @@ const Banner = () => {
 							CRYPTRACKER
 							<br></br>
 							<p style={{fontSize:"15px"}}>by WMouton</p>
-							<p style={{fontSize:"10px"}}>In collaboration with Snoweirdo</p>
+							{/* <p style={{fontSize:"10px"}}>In collaboration with Snoweirdo</p> */}
 						</Typography>
 						
 						<Typography
