@@ -124,13 +124,13 @@ export default function AuthModal() {
             {value === 0 && <Login handleClose={handleClose} />}
             {value === 1 && <Signup handleClose={handleClose} />}
 
-            <Box className={classes.google}>
+            {/* <Box className={classes.google}>
               <span>OR</span>
               <GoogleButton
                 style={{ width: '100%', outline: 'none' }}
                 onClick={signInWithGoogle}
               />
-            </Box>
+            </Box> */}
           </div>
         </Fade>
       </Modal>
