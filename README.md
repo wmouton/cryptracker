@@ -4,7 +4,7 @@ A cryptocurrency tracker web application built with ReactJS and Material-UI.
 
 ---
 
-<h2>View <a href="https://leeth-cryptracker.netlify.app target="_blank">Demo</a></h2>
+<h2>View <a href="https://leeth-cryptracker.netlify.app/" target="_blank">Demo</a></h2>
 
 <img src="./src/img/cryptracker.png"/>
 
