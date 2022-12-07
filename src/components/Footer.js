@@ -12,12 +12,6 @@ const Footer = () => {
 			>
 				<Typography
 					variant='h6'
-					style={{ margin: 18, fontFamily: 'Montserrat' }}
-				>
-					Copyright © 2021, Cryptracker
-				</Typography>
-				<Typography
-					variant='h6'
 					style={{ margin: 18, fontFamily: 'Marienda', fontSize: '15px' }}
 				>
 					<a href='mailto:wmouton.dev@gmail.com'>wmouton.dev@gmail.com</a>
@@ -31,7 +25,8 @@ const Footer = () => {
 					}}
 				>
 					Developed by{' '}
-					<a href='https://github.com/l33th'>WMouton</a>
+					<a href='https://github.com/l33th'>WMouton</a><br/>
+					Copyright © 2022, Cryptracker	
 				</Typography>
 			</Container>
 		</footer>

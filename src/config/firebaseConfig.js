@@ -1,5 +1,5 @@
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
+  apiKey: 'AIzaSyAqIdIbCu_NBHPtA4PwOYdIm2cKbBiI9ag',
   authDomain: "cryptracer-crypto-tracker.firebaseapp.com",
   projectId: "cryptracer-crypto-tracker",
   storageBucket: "cryptracer-crypto-tracker.appspot.com",
